@@ -58,6 +58,9 @@ WindowsButton, WindowsTextField, MacOSCheckBox are concrete classes that impleme
 The associations between the classes represent the relationships and dependencies.
 for GUIFactory is associated with WindowsFactory and MacOSFactory, indicating that it can create instance of these concrete factories
 
+Association: This is a general relationship between two or more classes or objects in which one class knows about the existence of another class
+but doesn't necessarily have a specific dependency on it.
+associations can be simple or complex, depending on the level of interaction between the associated classes.
 */
 
 
