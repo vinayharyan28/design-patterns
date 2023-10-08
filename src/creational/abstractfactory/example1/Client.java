@@ -31,24 +31,6 @@ public class Client {
 }
 
 /*
-+-------------------+     +-----------------------+     +----------------------+
-|    GUIFactory    |<>--- |      WindowsFactory  |<>--- |      MacOSFactory   |
-+-------------------+     +-----------------------+     +----------------------+
-| + createButton()  |     | + createButton()      |     | + createButton()     |
-| + createTextField()|     | + createTextField()   |     | + createTextField()  |
-| + createCheckbox() |     | + createCheckbox()    |     | + createCheckbox()   |
-+-------------------+     +-----------------------+     +----------------------+
-        |                          |                          |
-        |                          |                          |
-        |                          |                          |
-        v                          v                          v
-+-------------------+    +-------------------+    +-------------------+
-|      Button       |    |    TextField     |    |     Checkbox      |
-+-------------------+    +-------------------+    +-------------------+
-| + render()        |    | + render()        |    | + render()        |
-| + onClick()       |    | + onInput()       |    | + onCheck()       |
-+-------------------+    +-------------------+    +-------------------+
-
 
 GUIFactory: is an abstract class or interface that declares factory methods for creating UI elements.
 WindowsFactory and MacOSFactory are concrete factories that implement GUIFactory and provide platform-specific implementations of UI elements.
