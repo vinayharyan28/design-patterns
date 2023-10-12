@@ -9,3 +9,16 @@ _The Factor method is a design pattern that falls under the category of creation
 It provides an interface for creating objects but allows subclasses to alter type of objects that will be created.
 This pattern is useful when you want to create objects without specifying the exact class of object that will be created until runtime._
 
+* **Builder**:
+_The builder design pattern in java is creational design pattern that is used to construct complex object step by step.
+it separates the construction of an object from its representation, allowing you to create different variations of an object without altering its class.
+this pattern is particularly useful when dealing with objects that have a large number of optional attributes or configurations._
+
+
+
+
+
+# **Structural design pattern**
+
+
+# **Behavioral design pattern**
