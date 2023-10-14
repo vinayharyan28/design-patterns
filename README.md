@@ -14,6 +14,10 @@ _The builder design pattern in java is creational design pattern that is used to
 it separates the construction of an object from its representation, allowing you to create different variations of an object without altering its class.
 this pattern is particularly useful when dealing with objects that have a large number of optional attributes or configurations._
 
+* **Prototype**:
+_The prototype design pattern is a creational design pattern that is used to create new objects by copying an existing object, known as prototype.
+This pattern is particularly useful when creating objects is more efficient by cloning an existing object rather than creating them from scratch, especially when the cost of initialization is high_
+
 
 
 
