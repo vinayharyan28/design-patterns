@@ -1,18 +1,23 @@
 # **Creational design pattern**
 * **Abstract Factory**: 
 _Abstract factory is a design pattern that falls under the creational design patterns category.
-It provides an interface for creating families of related or dependent object without specifying their concrete classes.
-It allows you to create objects that belong to a particular family or group and ensure that these objects are compatible with each other._
+It provides an interface
+  for creating families of a related or dependent object without specifying their concrete classes.
+It allows you to create objects that belong to a particular family or group
+  and ensure that these objects are compatible with each other._
 
 * **Factory**:
 _The Factor method is a design pattern that falls under the category of creational design patterns.
-It provides an interface for creating objects but allows subclasses to alter type of objects that will be created.
+It provides an interface for creating objects but allows subclasses to alter a type of objects that will be created.
 This pattern is useful when you want to create objects without specifying the exact class of object that will be created until runtime._
 
 * **Builder**:
-_The builder design pattern in java is creational design pattern that is used to construct complex object step by step.
-it separates the construction of an object from its representation, allowing you to create different variations of an object without altering its class.
-this pattern is particularly useful when dealing with objects that have a large number of optional attributes or configurations._
+_The builder design pattern in java is a creational design pattern
+  that is used to construct complex object step by step.
+it separates the construction of an object from its representation,
+  allowing you to create different variations of an object without altering its class.
+this pattern is particularly useful
+  when dealing with objects that have a large number of optional attributes or configurations._
 
 * **Prototype**:
 _The prototype design pattern is a creational design pattern that is used to create new objects by copying an existing object, known as prototype.
@@ -30,8 +35,16 @@ It ensures that there is only one instance of a particular class in the system a
 # **Structural design pattern**
 * **Adapter**:
 _The Adapter design pattern is a structural pattern that allows objects with incompatible interfaces to work together.
-It acts as a bridge between two incompatible interface, making them work together without modifying their source code.
+It acts as a bridge between two incompatible interfaces, making them work together without modifying their source code.
 In java, adapters are commonly used to make existing classes work with others without modifying their source code._
 
+* **Bridge**:
+_The Bridge design pattern is a structural design pattern that is used to separate an object's abstraction from its implementation so that both can be modified independently without affecting each other.
+it is a way to decouple an abstraction from its concrete classes, making it easier to add new functionality or variations without changing the exiting code.
+The Bridge pattern promotes flexibility and extensibility in your software design._
+  1. _Abstraction: this is the interface or abstract class that defines the high-level logic or behavior. it contains a reference to the implementor and defines methods that delegate the implementation to the implementor._
+  2. _Refined Abstraction: this i a subclass of the Abstraction. it can provide additional method or customization on top of the basic Abstraction._
+  3. _Implementor: This is the interface or abstract class that defines the methods that the concrete implementors must implement. it represents the low-level, platform-specific code._
+  4. _Concrete implementor: these are the classes that implement the implementor interface. they contain the platform-specific code that is invoked by the abstraction and refined abstraction._
 
 # **Behavioral design pattern**
