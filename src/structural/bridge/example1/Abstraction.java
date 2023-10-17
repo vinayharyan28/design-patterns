@@ -1,4 +1,4 @@
-package structural.adapter.bridge;
+package structural.bridge.example1;
 
 public abstract class Abstraction {
     protected Implementor implementor;

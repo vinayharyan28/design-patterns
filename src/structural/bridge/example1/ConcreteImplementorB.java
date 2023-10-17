@@ -1,4 +1,4 @@
-package structural.adapter.bridge;
+package structural.bridge.example1;
 
 public class ConcreteImplementorB implements Implementor{
 
