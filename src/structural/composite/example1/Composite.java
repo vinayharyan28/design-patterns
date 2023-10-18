@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.example1;
 import java.util.ArrayList;
 import java.util.List;
 public class Composite implements Component{

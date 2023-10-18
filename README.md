@@ -45,16 +45,25 @@ The Bridge pattern promotes flexibility and extensibility in your software desig
   1. _Abstraction: this is the interface or abstract class that defines the high-level logic or behavior. it contains a reference to the implementor and defines methods that delegate the implementation to the implementor._
   2. _Refined Abstraction: this i a subclass of the Abstraction. it can provide additional method or customization on top of the basic Abstraction._
   3. _Implementor: This is the interface or abstract class that defines the methods that the concrete implementors must implement. it represents the low-level, platform-specific code._
-  4. _Concrete implementor: these are the classes that implement the implementor interface. they contain the platform-specific code that is invoked by the abstraction and refined abstraction._
+  4. _Concrete implementor: these are the classes that implement the implementor interface. they contain the platform-specific code invoked by the abstraction and refined abstraction._
 
 * **Composite**:
 _The composite design pattern is a structural design pattern that allows you to compose objects into tree structure to represent part-whole hierarchies.
-It lets you treat individual objects and compositions of objects and compositions of objects uniformly.
+It lets you treat individual objects and compositions of objects uniformly.
 This pattern is used to create hierarchical structures of objects where clients can treat individual objects and compositions of objects in uniform way.
-The composite pattern allows you to build complex structures using simple building blocks(individual objects) and to teat these structure uniformly
+The composite pattern allows you to build complex structures using simple building blocks(individual objects) and to treat these structures uniformly
   1. _Component: This is the base interface or abstract class that defines the common interface for all concrete objects and their compositions. it typically includes operations that are common to both leaf and composite objects._
   2. _Leaf: This is a class that implements the component interface but represents individual objects that do not have any child objects. these are the "leaf" nodes in the tree structure._
   3. _Composite: This is a class that implements the component interface and can contain a collection of child components, which can be either leaf or composite objects. composites have methods for adding, removing, and accessing child components._
 
+* **Decorator**:
+_The decorator design pattern is a structural design pattern that allows you to dynamically add behaviors or responsibilities to objects without altering their code.
+This pattern is used to extend the functionality of classes in a flexible and reusable way.
+Decorator pattern is commonly used to modify the behavior of objects, often in a cascading or layered manner.
+  1. _Component (or Interface): This is the core interface or abstract class that defines the common methods and attributes that concrete components and decorators must implement. it represents the base object you want to extend._
+  2. _Concrete component: This is a concrete implementation of the component interface. it provides the basic functionality and can be extended by decorators._
+  3. _Decorator: The decorator is an abstract class or interface that also implements the component interface. it has a reference to a component and can modify the behavior of the component by adding new methods or overriding existing methods._
+  4. _Concrete Decorator: These are concrete classes that extend the decorator class. each concrete decorator adds specific behavior to the component. decorators can be stacked to combine multiple functionalities_
+_
 
 # **Behavioral design pattern**

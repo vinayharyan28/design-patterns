@@ -1,4 +1,4 @@
-package structural.composite;
+package structural.composite.example1;
 
 public class CompositeClient {
     public static void main(String[] args) {
