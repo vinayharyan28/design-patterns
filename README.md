@@ -66,4 +66,13 @@ Decorator pattern is commonly used to modify the behavior of objects, often in a
   4. _Concrete Decorator: These are concrete classes that extend the decorator class. each concrete decorator adds specific behavior to the component. decorators can be stacked to combine multiple functionalities_
 _
 
+* **Facade**:
+_The facade design pattern is a structural design pattern.
+It provides a simplified and unified interface to set of interfaces in a subsystem, making it easier for clients to interact with that subsystem.
+Essentially, it acts as higher-level interface that hides the complexities of the subsystem, allowing clients to work with the subsystem in a more straightforward manner.
+The Facade pattern is useful in various scenarios, including when you want to:
+  1. _Provide a simple and unified interface to a complex system._ 
+  2. _Encapsulate the complexities of a subsystem to reduce client code dependencies on it._
+  3. _Promote decoupling between the client code and the subsystem, making it easier to change or replace part of the subsystem without affecting the clients._
+
 # **Behavioral design pattern**
