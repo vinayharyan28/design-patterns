@@ -75,4 +75,12 @@ The Facade pattern is useful in various scenarios, including when you want to:
   2. _Encapsulate the complexities of a subsystem to reduce client code dependencies on it._
   3. _Promote decoupling between the client code and the subsystem, making it easier to change or replace part of the subsystem without affecting the clients._
 
+* **Flyweight**:
+_The flyweight design pattern is a structural design pattern used in software engineering to reduce the memory usage or computational overhead of an object by sharing as much as possible with similar objects.
+This pattern is particularly useful when you need to create a large number of similar objects efficiently.
+  1. _Flyweight interface/class: define an interface or abstract class that represents the common properties and methods that can be shared among multiple objects. This class usually has some intrinsic state (shared data) and extrinsic state (context-dependent data) that can be passed as method parameters._
+  2. _Concrete Flyweight class: create implementations of the flyweight class that represent the intrinsic state of objects. These objects should be shared among multiple context to minimize memory usage._
+  3. _Flyweight Factory: create a factory class that manages the creation and sharing of flyweight objects. This factory class maintains a pool of flyweight objects and provides a way to retrieve these objects based on the extrinsic state. it ensures that there is only one instance of each unique intrinsic state._
+
+
 # **Behavioral design pattern**
