@@ -97,3 +97,12 @@ The proxy design pattern is typically used in scenarios when want to control or 
 
 # **Behavioral design pattern**
 _behavioural design patterns deal with the interaction and communication between objects and classes. These patterns focus on how objects collaborate to achieve specific behaviours and responsibilities, providing solutions to common challenges in designing and managing complex systems. Behavioural design patterns help ensure that the objects within a system interact in a flexible, efficient, and maintainable way_
+
+* **Chain of responsibility:**:
+_The chain of responsibility is a behavioral design pattern that is used to pass requests along a chain of handlers.
+Each handler decides either to process the request or to pass it to the next handler in the chain.
+This pattern decouples the sender and receiver of a request and allows multiple objects to handle the request without the sender needing to know which object ultimately process it._
+  1. _**Participants:**_
+      _**Handler Interface/Abstract Class:**_ _This is an interface or an abstract class that declares a method to handle requests. It often contains a reference to the next handler in the chain (a successor), either directly or via a setter method._
+      _**Concrete Handlers:**_ _These are classes that implement the handler interface or extend the handler abstract class. They provide concrete implementations of the request handling method. If they can't handle the request, they pass it to the next handler in the chain._
+      _**Client:**_ _The client is responsible for creating the chain of handlers and initiating the request. The client doesn't need to know which handler will process the request._
