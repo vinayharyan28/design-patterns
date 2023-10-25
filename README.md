@@ -106,3 +106,11 @@ This pattern decouples the sender and receiver of a request and allows multiple 
       _**Handler Interface/Abstract Class:**_ _This is an interface or an abstract class that declares a method to handle requests. It often contains a reference to the next handler in the chain (a successor), either directly or via a setter method._
       _**Concrete Handlers:**_ _These are classes that implement the handler interface or extend the handler abstract class. They provide concrete implementations of the request handling method. If they can't handle the request, they pass it to the next handler in the chain._
       _**Client:**_ _The client is responsible for creating the chain of handlers and initiating the request. The client doesn't need to know which handler will process the request._
+
+
+* **Command:**
+_The command design pattern is a behavioral design pattern that encapsulates a request as an object, thereby allowing you to parameterize clients with queues, requests, and operations.
+This pattern allows you to decouple the sender and receiver of a request and provides a way to support undoable operations.
+It's particularly useful when you need to implement feature like macros, queuing requests, or logging requests.
+The command design pattern promotes loose coupling between the invoker and the receiver, making it easy to add new commands and receivers without modifying existing code.
+It also enables features like undo and redo, logging, and more._
