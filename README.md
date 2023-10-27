@@ -46,7 +46,7 @@ _The Bridge design pattern is a structural design pattern that is used to separa
 it is a way to decouple an abstraction from its concrete classes, making it easier to add new functionality or variations without changing the exiting code.
 The Bridge pattern promotes flexibility and extensibility in your software design._
   1. _Abstraction: this is the interface or abstract class that defines the high-level logic or behavior. it contains a reference to the implementor and defines methods that delegate the implementation to the implementor._
-  2. _Refined Abstraction: this i a subclass of the Abstraction. it can provide additional method or customization on top of the basic Abstraction._
+  2. _Refined Abstraction: this is a subclass of the Abstraction. it can provide additional method or customization on top of the basic Abstraction._
   3. _Implementor: This is the interface or abstract class that defines the methods that the concrete implementors must implement. it represents the low-level, platform-specific code._
   4. _Concrete implementor: these are the classes that implement the implementor interface. they contain the platform-specific code invoked by the abstraction and refined abstraction._
 
@@ -86,7 +86,7 @@ This pattern is particularly useful when you need to create a large number of si
 
 * **Proxy**:
 _The proxy design pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it.
-In other words, it acts as an intermediary or representative of the real object and allows you to add an additional layer of control or functionality when accessing the real object.
+In other words, it acts as an intermediary or representative of the real object and allows you to add a layer of control or functionality when accessing the real object.
 The proxy object. The proxy object can be seen as a go-between, intercepting requests and performing tasks like lazy loading, access control, logging and caching.
 The proxy design pattern is typically used in scenarios when want to control or monitor access to an object, or when you want to defer the creation and initialization of the real object until it is actually needed, which is known as lazy initialization._
 
@@ -118,3 +118,24 @@ It also enables features like undo and redo, logging, and more._
 _The interpreter design pattern is a behavioral design pattern that defines a language for a problem domain and provides a way to evaluate and interpret expression written in that language.
 It is used to represent and evaluate grammatical or semantic expressions written in that language.
 This pattern is often used in languages processing, compilers, and rule-based engines._
+
+* **Iterator:**
+_The Iterator Design Pattern in java is a behavioral pattern that provides a way to access elements of a collection sequentially without exposing the underlying details of the collection.
+It's a common pattern used in java, especially with collections like ArrayList, HashMap, and more.
+The primary goal is to separate the iteration logic from the collection, making it easy to iterate over different types of collections in a consistent manner._
+  1. _**Iterator interface:**_
+     _In Java, the Iterator pattern often starts with an 'Iterator' interface.
+     This interface defines methods for traversing a collection, typically including method like:
+     **'next()':** Return the next element in the collection.
+     **'hasNext()':** Checks if there are more elements to iterate over.
+     **(Optionally)** 'remove()': Removes the last element returned by 'next()'_
+
+* **Mediator:**
+_The Mediator design pattern is behavioral design pattern that promotes loose coupling among components in a system.
+It's used to reduce the direct communication between components and instead centralize control through a design pattern. Mediator object.
+This pattern is particularly and instead centralize control through a design pattern. Mediator object.
+This pattern is particularly helpful when you a complex system with many interconnected components, and you want to avoid the spaghetti-like connections that can arise from direct communication between components._
+
+  1. _**Mediator:**_ _This is an interface or an abstract class that defines the communication interface between the components. it provides methods for components to send and receive message, effectively acting as an intermediary._
+  2. _**Concrete Mediator:**_ _This is a specific implementation of the design pattern. Mediator interface. it manages the relationships and communication between components. it is aware of all the concrete components and how they should interact._
+  3. _**Colleague Components:**_ _These are individual components in the system. they are often decoupled from each other and communicate with the design pattern. Mediator instead of directly with each other. Colleagues know about the design pattern. mediator, but they don't need to know about other colleagues._
