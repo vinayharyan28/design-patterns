@@ -139,3 +139,63 @@ This pattern is particularly helpful when you a complex system with many interco
   1. _**Mediator:**_ _This is an interface or an abstract class that defines the communication interface between the components. it provides methods for components to send and receive message, effectively acting as an intermediary._
   2. _**Concrete Mediator:**_ _This is a specific implementation of the design pattern. Mediator interface. it manages the relationships and communication between components. it is aware of all the concrete components and how they should interact._
   3. _**Colleague Components:**_ _These are individual components in the system. they are often decoupled from each other and communicate with the design pattern. Mediator instead of directly with each other. Colleagues know about the design pattern. mediator, but they don't need to know about other colleagues._
+
+* **Memento:**
+_The memento design pattern is a behavioral pattern that provides a way to capture and externalize an object's internal state so that it can be restored to that state later.
+It is often used to implement features like undo/redo functionality or to save and restore the state of an object._
+  1. _**Originator:**_ _This is the object whose state you want to save. It creates a Memento object to capture It's current state and can also restore its sate from a Memento._
+  2. _**Memento:**_ _This is an object that stores the state of the originator. it has two main responsibilities: storing the state and providing a way to get the state back._
+  3. _**Caretaker:**_ _This is responsible for holding and managing the Memento objects. It doesn't modify the Memento but can store and retrieve them from the Originator._
+
+* **Observer:**
+_The Observer design pattern is behavioral pattern. 
+It's used to establish a one-to-many dependency between objects, where one object (the subject or observable) maintains a list of its dependents (observers) and notifies them of any state changes.
+This pattern is particularly useful when the state of another object changes._
+  1. _**Subject:**_ _This is the object that holds the data or state you want to observe. It has a list of observers and provides methods to attach, detach, and notify observer._
+  2. _**Observer:**_ _These are the objects interested in the sate changes of the subject. They implement an interface or base class that defines an update method. when the subject's sate changes, it calls the update method on all its registered observers._
+  3. _**Concrete Observer:**_ _Specific implementations of the observer that define how they respond to updates from the subject._
+_**Key points of the observer patterns:**_
+  _**Loose Coupling:**_ _The observer pattern promotes loose coupling between the subject and its observers. the subject doesn't need to know the specifics of its observers, and vice versa._
+  _**Flexibility:**_ _You can easily add or remove observers without changing the subject or other observers._
+  _**Broadcast Update:**_ _When the subject's sate changes, it broadcasts updates to all registered observers. each observer can respond to the change in its own way._
+  _**Use Cases: **_ _The Observer pattern is commonly used in scenarios like implementing event handling systems, UI components, and notification systems where multiple objects need to react to changes in a particular object's sate._
+  _**Java's Built-in Observer pattern:**_ _In Java, The Observer pattern is implemented using classes and interfaces from the java.util package, such as Observable and Observer._
+
+* **State:**
+_The state design pattern is a behavioral pattern that allows an object to alter Its behavior when internal state changes.
+This pattern is particularly useful when you have an object with multiple states, and you want to manage transitions between these states in a clean organized way.
+It helps make the code more maintainable and avoids complex conditional statements._
+  1. _**Context:**_ _This is the class that holds a reference to the current state. The context delegates the behavior to the current state object._
+  2. _**State Interface or Abstract Class**_ _This is an interface or an abstract class that defines a set of methods for all concrete states. It enforces that all concrete state have these methods._
+  3. _**Concrete States**_ _These are the individual state classes that implement the state interface/abstract class. Each concrete state class provides its own implementation of the methods defined in the state interface/abstract class._
+
+* **Strategy:**
+_The Strategy design pattern is a behavioral design pattern that defines a family of algorithms, encapsulation each one, and makes them interchangeable.
+It allows a client to choose an algorithm from a family of algorithms at runtimes.
+This pattern is helpful when you have a situation where you need to select one algorithm out of several possibility dynamically._
+  1. _**Define a family of algorithms:**_ _Create a set of related algorithms or behaviors, and defines them as separate classes or interface. These classes should encapsulate specific variation in behavior._
+  2. _**Encapsulate each algorithm:**_ _Each algorithm is encapsulated in its own class that implements a common interface or extends a common base class. This interface defines a contract that all concrete strategies must adhere to._
+  3. _**Context class:**_ _Create a context class that holds a reference to one of the strategy objects. The context class is responsible for invoking the chosen algorithm. It should have a setter method to allow the client to switch between different strategies._
+  4. _**Client code:**_ _In your client code, you create an instance of the context class and set its strategy by calling the setter method with the appropriate concrete strategy object._
+_By using the strategy pattern, you can easily switch between different algorithms or behaviors without modifying the client code.
+It promotes flexibility and maintainability in your codebase._
+
+* **Template Method:**
+_The template method is a behavioral design pattern that defines the structure of an algorithm but allows its steps to be implemented by subclasses.
+It used when you want to create an algorithm framework in a base class and leave some specific steps of the algorithm framework in a base class and leave some specific steps of the algorithm to be implemented by concrete subclasses.
+This pattern provides a way to enforce a common algorithm structure while allowing variations in the implementation of certain steps._
+  1. _**Create an abstract base class:**_ _Define an abstract class that contains the overall structure of the algorithm, including the common steps. This class should also declare abstract methods (or hooks) that represent the steps that need to be implemented by concrete subclasses._
+  2. _**Implement common steps:**_ _In the abstract base class, provide concrete implementations for the abstract base class, provide concrete implementations for the common steps of the algorithm. These are steps that are common to all subclass and remain unchanged._
+  3. _**Declare abstract methods:**_ _Declare abstract methods in the abstract base class for the steps that need to be customized by concrete subclasses. These abstract methods serve as hooks that allow subclasses to provide own implementation._
+  4. _**Concrete Subclasses:**_ _Create concrete subclasses that inherit from the abstract base class. These subclasses must implement the abstract methods, providing their specific behavior for the algorithm's customizable steps._
+  5. _**Template method:**_ _The abstract base class includes a template method that defines the overall algorithm structure. This template method calls the common steps and abstract methods (hooks) as necessary to execute the algorithm._
+
+* **visitor:**
+_The visitor design pattern is a behavioral design pattern that allows you to add further operations to objects without having to modify them.
+It is particularly useful when you have a complex hierarchy of objects with different type, and you want to perform various operation on these objects without altering their structure.
+The visitor pattern achieves this by separating the algorithm from the objects it operates on._
+  1. _**Define the visitor interface:**_ _Create an interface or an abstract class that declares a set of methods, each corresponding to a type of element you want to visit. These methods should take the concrete element as arguments._
+  2. _**Implement the concrete visitors:**_ _Create concrete visitor classes that implement the visitor interface. Each concrete element should implement this interface and provide an implement should implement this interface and provide an implementation for the accept method._
+  3. _**Define the Visitable interface:**_ _In your object hierarchy, create an interface (or an abstract class) that declares an accept method which accepts a visitor as an argument. each concrete element should implement this interface and provide an implementation for the accept method._
+  4. _**Implement the concrete elements:**_ _Create concrete classes for the elements you want to visit. these classes implement the accept method allow visitors to perform operation on them._
+  5. _**Client code:**_ _In your client code, you can create visitor objects and pass them to the elements using the accept method. The elements will then call the appropriate method on the visitor, allowing it to perform the desired operation._
